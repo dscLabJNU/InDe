@@ -1,0 +1,8 @@
+SET(libdestor_a_SOURCES ae_chunking.cpp assembly_restore.cpp bloom_filter.cpp cap_rewrite.cpp cbr_rewrite.cpp cfl_rewrite.cpp chunk_phase.cpp cma.cpp config.cpp containerstore.cpp dedup_phase.cpp destor.cpp index.cpp do_backup.cpp do_delete.cpp do_restore.cpp filter_phase.cpp fingerprint_cache.cpp har_rewrite.cpp hash_phase.cpp jcr.cpp kvstore_htable.cpp kvstore.cpp libhashfile.cpp lru_cache.cpp ned_rewrite.cpp optimal_restore.cpp queue.cpp rabin_chunking.cpp read_fsl_trace.cpp read_phase.cpp recipestore.cpp restore_aware.cpp rewrite_phase.cpp sampling_method.cpp sds.cpp segmenting_method.cpp serial.cpp similarity_detection.cpp smr_rewrite.cpp sync_queue.cpp trace_phase.cpp optimal_fls.cpp)
+
+find_package (PkgConfig REQUIRED)
+pkg_check_modules (GLIB2 glib-2.0)
+
+include_directories (${GLIB2_INCLUDE_DIRS})
+
+add_library (libdestor STATIC ${libdestor_a_SOURCES})
