@@ -1,4 +1,4 @@
-# InDe：an inline deduplication approach
+# InDe: an inline deduplication approach
 
 We propose an inline deduplication approach for storage systems, called InDe, which uses a greedy algorithm to detect valid container utilization and dynamically adjusts the number of old container references in each segment.
 
